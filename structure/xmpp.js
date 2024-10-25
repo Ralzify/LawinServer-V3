@@ -11,6 +11,8 @@ wss.on("error", (err) => {
     // console.log("XMPP \x1b[31mFAILED\x1b[0m to start hosting (NOTE: This should not affect LawinServer).");
 })
 
+console.log(``);
+
 global.Clients = [];
 
 wss.on('connection', async (ws) => {
@@ -67,7 +69,7 @@ wss.on('connection', async (ws) => {
                 if (decodedBase64 && accountId && decodedBase64.length == 3) {
                     Authenticated = true;
                     
-                    console.log(`An xmpp client with the account id ${accountId} has logged in.`);
+                    console.log(`You have logged in with the username ${accountId}!`);
 
                     ws.send(XMLBuilder.create("success").attribute("xmlns", "urn:ietf:params:xml:ns:xmpp-sasl").toString());
                 } else {
@@ -202,7 +204,7 @@ function RemoveClient(ws) {
     if (global.Clients.find(i => i.client == ws)) {
         updatePresenceForAll(ws, "{}", false, true);
 
-        console.log(`An xmpp client with the account id ${global.Clients.find(i => i.client == ws).accountId} has logged out.`);
+        console.log(`${global.Clients.find(i => i.client == ws).accountId} has logged out.`);
 
         global.Clients.splice(global.Clients.findIndex(i => i.client == ws), 1);
     }
