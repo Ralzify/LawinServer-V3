@@ -1160,41 +1160,99 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         }
     }
 
-    res.json({
-        "channels": {
-            "client-matchmaking": {
-                "states": [],
-                "cacheExpire": "9999-01-01T22:28:47.830Z"
+    if (memory.build == 13.40) {
+        res.json({
+            "channels": {
+                "client-matchmaking": {
+                    "states": [
+                        {
+                            "validFrom": "2022-08-18T00:05:37.533Z",
+                            "activeEvents": [],
+                            "state": {
+                                "activePurchaseLimitingEventIds": [],
+                                "storefront": {},
+                                "rmtPromotionConfig": [],
+                                "storeEnd": "0001-01-01T00:00:00.000Z"
+                            }
+                        }
+                    ],
+                    "cacheExpire": "2022-08-18T00:20:37.534Z"
+                },
+                "client-events": {
+                    "states": [{
+                        "validFrom": "2019-12-31T23:59:59.999Z",
+                        "activeEvents": [
+                            {
+                                "eventType": "WL0",
+                                "activeUntil": "9999-12-31T23:59:59.999Z",
+                                "activeSince": "2019-12-31T23:59:59.999Z"
+                            }
+                        ],
+                        "state": {
+                            "activeStorefronts": [],
+                            "eventNamedWeights": {},
+                            "seasonNumber": 13,
+                            "seasonTemplateId": "AthenaSeason:athenaseason13",
+                            "matchXpBonusPoints": 0,
+                            "eventPunchCardTemplateId": "",
+                            "seasonBegin": "2022-07-18T00:05:37.534Z",
+                            "seasonEnd": "9999-12-31T23:59:59.999Z",
+                            "seasonDisplayedEnd": "9999-12-31T23:59:59.999Z",
+                            "weeklyStoreEnd": "9999-12-31T23:59:59.999Z",
+                            "dailyStoreEnd": "9999-12-31T23:59:59.999Z",
+                            "stwDailyStoreEnd": "9999-12-31T23:59:59.999Z",
+                            "stwEventStoreEnd": "9999-12-31T23:59:59.999Z",
+                            "stwWeeklyStoreEnd": "9999-12-31T23:59:59.999Z",
+                            "sectionStoreEnds": {}
+                        }
+                    }],
+                    "cacheExpire": "2022-08-18T00:20:37.534Z"
+                }
             },
-            "client-events": {
-                "states": [{
-                    "validFrom": "2020-01-01T20:28:47.830Z",
-                    "activeEvents": activeEvents,
-                    "state": {
-                        "activeStorefronts": [],
-                        "eventNamedWeights": {},
-                        "seasonNumber": memory.season,
-                        "seasonTemplateId": `AthenaSeason:athenaseason${memory.season}`,
-                        "matchXpBonusPoints": 0,
-                        "seasonBegin": "2020-01-01T13:00:00Z",
-                        "seasonEnd": "9999-01-01T14:00:00Z",
-                        "seasonDisplayedEnd": "9999-01-01T07:30:00Z",
-                        "weeklyStoreEnd": "9999-01-01T00:00:00Z",
-                        "stwEventStoreEnd": "9999-01-01T00:00:00.000Z",
-                        "stwWeeklyStoreEnd": "9999-01-01T00:00:00.000Z",
-                        "sectionStoreEnds": {
-                            "Featured": "9999-01-01T00:00:00.000Z"
-                        },
-                        "dailyStoreEnd": "9999-01-01T00:00:00Z"
-                    }
-                }],
-                "cacheExpire": "9999-01-01T22:28:47.830Z"
-            }
-        },
-        "eventsTimeOffsetHrs": 0,
-        "cacheIntervalMins": 10,
-        "currentTime": new Date().toISOString()
-    });
+            "eventsTimeOffsetHrs": 0,
+            "cacheIntervalMins": 10,
+            "currentTime": "2022-08-18T00:05:37.534Z",
+            "cacheIntervalMins": 15
+        });
+    }
+    else
+    {
+        res.json({
+            "channels": {
+                "client-matchmaking": {
+                    "states": [],
+                    "cacheExpire": "9999-01-01T22:28:47.830Z"
+                },
+                "client-events": {
+                    "states": [{
+                        "validFrom": "2020-01-01T20:28:47.830Z",
+                        "activeEvents": activeEvents,
+                        "state": {
+                            "activeStorefronts": [],
+                            "eventNamedWeights": {},
+                            "seasonNumber": memory.season,
+                            "seasonTemplateId": `AthenaSeason:athenaseason${memory.season}`,
+                            "matchXpBonusPoints": 0,
+                            "seasonBegin": "2020-01-01T13:00:00Z",
+                            "seasonEnd": "9999-01-01T14:00:00Z",
+                            "seasonDisplayedEnd": "9999-01-01T07:30:00Z",
+                            "weeklyStoreEnd": "9999-01-01T00:00:00Z",
+                            "stwEventStoreEnd": "9999-01-01T00:00:00.000Z",
+                            "stwWeeklyStoreEnd": "9999-01-01T00:00:00.000Z",
+                            "sectionStoreEnds": {
+                                "Featured": "9999-01-01T00:00:00.000Z"
+                            },
+                            "dailyStoreEnd": "9999-01-01T00:00:00Z"
+                        }
+                    }],
+                    "cacheExpire": "9999-01-01T22:28:47.830Z"
+                }
+            },
+            "eventsTimeOffsetHrs": 0,
+            "cacheIntervalMins": 10,
+            "currentTime": new Date().toISOString()
+        });
+    }
     res.end();
 })
 
