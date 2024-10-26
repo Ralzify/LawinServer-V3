@@ -17,38 +17,48 @@ express.use((req, res, next) => {
     else return next();
 })
 
+function getRawBody(req, res, next) {
+    req.rawBody = '';
+    req.setEncoding('utf8');  // Ensure consistent encoding
+
+    req.on('data', (chunk) => req.rawBody += chunk);
+    req.on('end', next);
+}
+
+express.use("/fortnite/api/cloudstorage/user/*/:file", getRawBody);  // Use middleware
+
 express.get("/fortnite/api/cloudstorage/system", async (req, res) => {
     const memory = functions.GetVersionInfo(req);
 
-    if (memory.build >= 9.40 && memory.build <= 10.40) {
-        return res.status(404).end();
+    if (memory.build <= 9.40 || memory.build >= 10.40) {  // Allow access for valid builds
+        const dir = path.join(__dirname, "..", "CloudStorage", "DefaultGame.ini");
+        let CloudFiles = [];
+
+        fs.readdirSync(dir).forEach(name => {
+            if (name.toLowerCase().endsWith(".ini")) {
+                const ParsedFile = fs.readFileSync(path.join(dir, name), 'utf-8');
+                const ParsedStats = fs.statSync(path.join(dir, name));
+
+                CloudFiles.push({
+                    "uniqueFilename": name,
+                    "filename": name,
+                    "hash": crypto.createHash('sha1').update(ParsedFile).digest('hex'),
+                    "hash256": crypto.createHash('sha256').update(ParsedFile).digest('hex'),
+                    "length": ParsedFile.length,
+                    "contentType": "application/octet-stream",
+                    "uploaded": ParsedStats.mtime,
+                    "storageType": "S3",
+                    "storageIds": {},
+                    "doNotCache": false  // Allow caching
+                });
+            }
+        });
+
+        return res.json(CloudFiles);
     }
 
-    const dir = path.join(__dirname, "..", "CloudStorage")
-    var CloudFiles = [];
-
-    fs.readdirSync(dir).forEach(name => {
-        if (name.toLowerCase().endsWith(".ini")) {
-            const ParsedFile = fs.readFileSync(path.join(dir, name), 'utf-8');
-            const ParsedStats = fs.statSync(path.join(dir, name));
-
-            CloudFiles.push({
-                "uniqueFilename": name,
-                "filename": name,
-                "hash": crypto.createHash('sha1').update(ParsedFile).digest('hex'),
-                "hash256": crypto.createHash('sha256').update(ParsedFile).digest('hex'),
-                "length": ParsedFile.length,
-                "contentType": "application/octet-stream",
-                "uploaded": ParsedStats.mtime,
-                "storageType": "S3",
-                "storageIds": {},
-                "doNotCache": true
-            })
-        }
-    });
-
-    res.json(CloudFiles)
-})
+    res.status(404).end();  // Block only when outside build range
+});
 
 express.get("/fortnite/api/cloudstorage/system/:file", async (req, res) => {
     const file = path.join(__dirname, "..", "CloudStorage", req.params.file);
