@@ -5,7 +5,7 @@ const readline = require('readline');
 const defaultGamePath = path.join(__dirname, '..', 'CloudStorage', 'DefaultGame.ini');
 
 const bloomText = `
-[AssetHotfix]  # Straight Bloom
+[AssetHotfix]
 +DataTable=/Game/Athena/Items/Weapons/AthenaRangedWeapons;RowUpdate;Sniper_BoltAction_Scope_Athena_C_Ore_T03;Spread;0
 +DataTable=/Game/Athena/Items/Weapons/AthenaRangedWeapons;RowUpdate;Sniper_BoltAction_Scope_Athena_UC_Ore_T03;Spread;0
 +DataTable=/Game/Athena/Items/Weapons/AthenaRangedWeapons;RowUpdate;Sniper_BoltAction_Scope_Athena_R_Ore_T03;Spread;0

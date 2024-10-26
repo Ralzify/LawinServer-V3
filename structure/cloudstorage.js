@@ -17,48 +17,38 @@ express.use((req, res, next) => {
     else return next();
 })
 
-function getRawBody(req, res, next) {
-    req.rawBody = '';
-    req.setEncoding('utf8');  // Ensure consistent encoding
-
-    req.on('data', (chunk) => req.rawBody += chunk);
-    req.on('end', next);
-}
-
-express.use("/fortnite/api/cloudstorage/user/*/:file", getRawBody);  // Use middleware
-
 express.get("/fortnite/api/cloudstorage/system", async (req, res) => {
     const memory = functions.GetVersionInfo(req);
 
-    if (memory.build <= 9.40 || memory.build >= 10.40) {  // Allow access for valid builds
-        const dir = path.join(__dirname, "..", "CloudStorage", "DefaultGame.ini");
-        let CloudFiles = [];
-
-        fs.readdirSync(dir).forEach(name => {
-            if (name.toLowerCase().endsWith(".ini")) {
-                const ParsedFile = fs.readFileSync(path.join(dir, name), 'utf-8');
-                const ParsedStats = fs.statSync(path.join(dir, name));
-
-                CloudFiles.push({
-                    "uniqueFilename": name,
-                    "filename": name,
-                    "hash": crypto.createHash('sha1').update(ParsedFile).digest('hex'),
-                    "hash256": crypto.createHash('sha256').update(ParsedFile).digest('hex'),
-                    "length": ParsedFile.length,
-                    "contentType": "application/octet-stream",
-                    "uploaded": ParsedStats.mtime,
-                    "storageType": "S3",
-                    "storageIds": {},
-                    "doNotCache": false  // Allow caching
-                });
-            }
-        });
-
-        return res.json(CloudFiles);
+    if (memory.build >= 9.40 && memory.build <= 10.40) {
+        return res.status(404).end();
     }
 
-    res.status(404).end();  // Block only when outside build range
-});
+    const dir = path.join(__dirname, "..", "CloudStorage")
+    var CloudFiles = [];
+
+    fs.readdirSync(dir).forEach(name => {
+        if (name.toLowerCase().endsWith(".ini")) {
+            const ParsedFile = fs.readFileSync(path.join(dir, name), 'utf-8');
+            const ParsedStats = fs.statSync(path.join(dir, name));
+
+            CloudFiles.push({
+                "uniqueFilename": name,
+                "filename": name,
+                "hash": crypto.createHash('sha1').update(ParsedFile).digest('hex'),
+                "hash256": crypto.createHash('sha256').update(ParsedFile).digest('hex'),
+                "length": ParsedFile.length,
+                "contentType": "application/octet-stream",
+                "uploaded": ParsedStats.mtime,
+                "storageType": "S3",
+                "storageIds": {},
+                "doNotCache": true
+            })
+        }
+    });
+
+    res.json(CloudFiles)
+})
 
 express.get("/fortnite/api/cloudstorage/system/:file", async (req, res) => {
     const file = path.join(__dirname, "..", "CloudStorage", req.params.file);
@@ -78,7 +68,7 @@ express.get("/fortnite/api/cloudstorage/user/*/:file", async (req, res) => {
         if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"))) {
             fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"));
         }
-    } catch (err) {}
+    } catch (err) { }
 
     res.set("Content-Type", "application/octet-stream")
 
@@ -111,14 +101,14 @@ express.get("/fortnite/api/cloudstorage/user/:accountId", async (req, res) => {
         if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"))) {
             fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"));
         }
-    } catch (err) {}
+    } catch (err) { }
 
     res.set("Content-Type", "application/json")
 
     const memory = functions.GetVersionInfo(req);
 
     var currentBuildID = memory.CL;
-    
+
     let file;
     if (process.env.LOCALAPPDATA) file = path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings", `ClientSettings-${currentBuildID}.Sav`);
     else file = path.join(__dirname, "..", "ClientSettings", `ClientSettings-${currentBuildID}.Sav`);
@@ -150,7 +140,7 @@ express.put("/fortnite/api/cloudstorage/user/*/:file", async (req, res) => {
         if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"))) {
             fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"));
         }
-    } catch (err) {}
+    } catch (err) { }
 
     if (req.params.file.toLowerCase() != "clientsettings.sav") {
         return res.status(404).json({
