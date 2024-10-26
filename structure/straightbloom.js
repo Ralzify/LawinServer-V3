@@ -238,8 +238,14 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
+function extractDataTables(text) {
+    return text.split('\n').filter(line => line.trim().startsWith('+DataTable='));
+}
+
 function bloomExists(content) {
-    return content.includes('[AssetHotfix]');
+    const dataTableLines = extractDataTables(bloomText);
+
+    return dataTableLines.every(line => content.includes(line));
 }
 
 function addBloom() {
