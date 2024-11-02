@@ -20,10 +20,6 @@ express.use((req, res, next) => {
 express.get("/fortnite/api/cloudstorage/system", async (req, res) => {
     const memory = functions.GetVersionInfo(req);
 
-    if (memory.build >= 9.40 && memory.build <= 10.40) {
-        return res.status(404).end();
-    }
-
     const dir = path.join(__dirname, "..", "CloudStorage")
     var CloudFiles = [];
 

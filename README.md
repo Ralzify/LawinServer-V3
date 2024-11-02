@@ -73,5 +73,5 @@
 ## How to use?
 1) Install [NodeJS](https://nodejs.org/en/)
 2) Run "install_packages.bat" (This file isn't required after the packages are installed.)
-3) Run "start.bat", It should say "Started listening on port 3551"
-4) Use something to redirect the fortnite servers to localhost:3551 (Which could be fiddler, ssl bypass that redirects servers, etc...)
+3) Run "start.bat". Choose whether you want to use straight bloom by typing Y / N. After that, if you've done everything right, you should be all set.
+4) Use [Reboot Launcher](https://github.com/Auties00/Reboot-Launcher/releases/latest) to launch your desired OG Fortnite version. Make sure to set the backend settings to local to prioritize this Lawin instead of the built in Reboot one.
