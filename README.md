@@ -14,9 +14,10 @@
 - Fixed other core bugs such as Synced Emotes (ty burlone), and disabling sand (bugged on reboot).
 - In DefaultGame.ini, there is a preset of many Data Tables and Curve Tables, you just need to remove the ";" to enable them (add it back to disable them)
 - Similarly, Double Pump is enabled in DefaultEngine.ini. You can add the ";" infront of both lines to disable it.
+- Fixed CloudStorage on 9.40-10.40 (defaultgame.ini bug)
 
 ## Planned Features/Updates
-- Fix 9.40 - 10.40 DefaultGame.ini
+- Fix 12.41 Locker
 
 ## Base Lawin Features:
 
