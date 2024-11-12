@@ -13,11 +13,11 @@
 - Fixed many bugs with Chapter 3, Season 1, such as: Lategame Storm Damage, and Shotgun Knockback.
 - Fixed other core bugs such as Synced Emotes (ty burlone), and disabling sand (bugged on reboot).
 - In DefaultGame.ini, there is a preset of many Data Tables and Curve Tables, you just need to remove the ";" to enable them (add it back to disable them)
-- Similarly, Double Pump is enabled in DefaultEngine.ini. You can add the ";" infront of both lines to disable it.
 - Fixed CloudStorage on 9.40-10.40 (defaultgame.ini bug)
+- Fixed 12.41 Locker
 
 ## Planned Features/Updates
-- Fix 12.41 Locker
+:3
 
 ## Base Lawin Features:
 
