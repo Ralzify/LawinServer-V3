@@ -7,7 +7,7 @@
   "profileId": "athena",
   "version": "no_version",
   "items": {
-    "ettrr4h-2wedfgbn-8i9jsghj-lpw9t2to-loadout1": {
+    "sandbox_loadout": {
       "templateId": "CosmeticLocker:cosmeticlocker_athena",
       "attributes": {
         "locker_slots_data": {
@@ -110849,7 +110849,8 @@
       "past_seasons": [],
       "season_match_boost": 999999999,
       "loadouts": [
-        "ettrr4h-2wedfgbn-8i9jsghj-lpw9t2to-loadout1"
+        "sandbox_loadout",
+        "lawin0-loadout"
       ],
       "favorite_victorypose": "",
       "mfa_reward_claimed": true,
@@ -110891,7 +110892,7 @@
         ""
       ],
       "inventory_limit_bonus": 0,
-      "last_applied_loadout": "",
+      "last_applied_loadout": "sandbox_loadout",
       "favorite_skydivecontrail": "",
       "favorite_pickaxe": "AthenaPickaxe:DefaultPickaxe",
       "favorite_glider": "AthenaGlider:DefaultGlider",
