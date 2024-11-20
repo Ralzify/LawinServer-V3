@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const iniparser = require("ini");
+const config = iniparser.parse(fs.readFileSync(path.join(__dirname, "..", "Config", "config.ini")).toString());
 
 const defaultGamePath = path.join(__dirname, '..', 'CloudStorage', 'DefaultGame.ini');
 
@@ -263,7 +265,20 @@ function removeBloom(content) {
     console.log('');
 }
 
+function removeBloomNoMessage(content) {
+    const updatedContent = content.replace(bloomText, '');
+    fs.writeFileSync(defaultGamePath, updatedContent, 'utf8');
+}
+
 function main() {
+    if (config.Profile.bStraightBloom == false) {
+        const content = fs.readFileSync(defaultGamePath, 'utf8');
+        removeBloomNoMessage(content);
+        require(path.join(__dirname, '..', 'index.js'));
+        rl.close();
+        return;
+    }
+
     rl.question('Do you want to use straight bloom? (Y/N) ', (answer) => {
         const content = fs.readFileSync(defaultGamePath, 'utf8');
 

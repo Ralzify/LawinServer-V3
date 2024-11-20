@@ -25,7 +25,8 @@ express.use(require("./structure/matchmaking.js"));
 express.use(require("./structure/cloudstorage.js"));
 express.use(require("./structure/mcp.js"));
 
-console.log('Welcome to Lawin!\n');
+console.log('Welcome to LawinServer V3!\n');
+// console.log('LawinServer V3 is an updated version of the original LawinServer Backend!\n');
 
 const port = process.env.PORT || 3551;
 express.listen(port, () => {
