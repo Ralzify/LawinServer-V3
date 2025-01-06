@@ -9,19 +9,19 @@
       "tcId": "61fb3dd8-f23d-45cc-9058-058ab223ba5c",
       "contentFields": {
         "body": {
-          "ar": "استمتع بتجربة لعب استثنائية!",
-          "en": "Have a phenomenal gaming experience!",
-          "de": "Wünsche allen ein wunderbares Spielerlebnis!",
-          "es": "¡Que disfrutes de tu experiencia de videojuegos!",
-          "es-419": "¡Ten una experiencia de juego espectacular!",
-          "fr": "Un bon jeu à toutes et à tous !",
-          "it": "Ti auguriamo un'esperienza di gioco fenomenale!",
-          "ja": "驚きの体験をしよう！",
-          "ko": "게임에서 환상적인 경험을 해보세요!",
-          "pl": "Życzymy fenomenalnej gry!",
-          "pt-BR": "Tenha uma experiência de jogo fenomenal!",
-          "ru": "Желаю невероятно приятной игры!",
-          "tr": "Muhteşem bir oyun deneyimi yaşamanı dileriz!"
+          "ar": "https://discord.gg/rPc5t4usPe",
+          "en": "https://discord.gg/rPc5t4usPe",
+          "de": "https://discord.gg/rPc5t4usPe",
+          "es": "https://discord.gg/rPc5t4usPe",
+          "es-419": "https://discord.gg/rPc5t4usPe",
+          "fr": "https://discord.gg/rPc5t4usPe",
+          "it": "https://discord.gg/rPc5t4usPe",
+          "ja": "https://discord.gg/rPc5t4usPe",
+          "ko": "https://discord.gg/rPc5t4usPe",
+          "pl": "https://discord.gg/rPc5t4usPe",
+          "pt-BR": "https://discord.gg/rPc5t4usPe",
+          "ru": "https://discord.gg/rPc5t4usPe",
+          "tr": "https://discord.gg/rPc5t4usPe"
         },
         "entryType": "Website",
         "image": [
@@ -31,7 +31,7 @@
             "url": "https://fortnite-public-service-prod11.ol.epicgames.com/images/motd.png"
           }
         ],
-        "tabTitleOverride": "LawinServer",
+        "tabTitleOverride": "LawinServer V3",
         "tileImage": [
           {
             "width": 1024,
@@ -40,18 +40,18 @@
           }
         ],
         "title": {
-          "ar": "مرحبًا بك في LawinServer!",
-          "en": "Welcome to LawinServer!",
-          "de": "Willkommen bei LawinServer!",
-          "es": "¡Bienvenidos a LawinServer!",
-          "es-419": "¡Bienvenidos a LawinServer!",
-          "fr": "Bienvenue sur LawinServer !",
-          "it": "Benvenuto in LawinServer!",
-          "ja": "LawinServerへようこそ！",
-          "ko": "LawinServer에 오신 것을 환영합니다!",
-          "pl": "Witaj w LawinServerze!",
-          "pt-BR": "Bem-vindo ao LawinServer!",
-          "ru": "Добро пожаловать в LawinServer!",
+          "ar": "مرحبًا بك في LawinServer V3!",
+          "en": "Welcome to LawinServer V3!",
+          "de": "Willkommen bei LawinServer V3!",
+          "es": "¡Bienvenidos a LawinServer V3!",
+          "es-419": "¡Bienvenidos a LawinServer V3!",
+          "fr": "Bienvenue sur LawinServer V3 !",
+          "it": "Benvenuto in LawinServer V3!",
+          "ja": "LawinServer V3へようこそ！",
+          "ko": "LawinServer V3에 오신 것을 환영합니다!",
+          "pl": "Witaj w LawinServer V3ze!",
+          "pt-BR": "Bem-vindo ao LawinServer V3!",
+          "ru": "Добро пожаловать в LawinServer V3!",
           "tr": "LavinServer'a Hoş Geldiniz!"
         },
         "videoAutoplay": false,

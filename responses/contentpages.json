@@ -9,8 +9,8 @@
       "_type": "CommonUI Simple Message",
       "message": {
         "_type": "CommonUI Simple Message Base",
-        "title": "LawinServer",
-        "body": "Join our discord: https://discord.gg/KJ8UaHZ\nYouTube: Lawin\nTwitter: @lawin_010"
+        "title": "LawinServer V3",
+        "body": "Thank you for using LawinServerV3!\n\nThis is an unofficial version of LawinV1 with many new improvements.\n\nJoin Our Discord: https://discord.gg/rPc5t4usPe\nMy Other Links: https://feds.lol/ralz"
       }
     },
     "_activeDate": "2017-07-19T13:14:04.490Z",
@@ -209,21 +209,21 @@
       "_type": "Battle Royale News",
       "messages": [
         {
-          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/discord.png",
+          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawinserverv3.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
-          "adspace": "DISCORD!",
-          "title": "Join our discord server!",
-          "body": "https://discord.gg/KJ8UaHZ",
+          "adspace": "WELCOME!",
+          "title": "Welcome to LawinServer V3!",
+          "body": "A modified version of the original LawinServer Backend.",
           "spotlight": false
         },
         {
-          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawin.jpg",
+          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/help.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
-          "adspace": "ENJOY!",
-          "title": "LawinServer",
-          "body": "Enjoy LawinServer!",
+          "adspace": "NEED HELP?",
+          "title": "Join our Discord!",
+          "body": "https://discord.gg/rPc5t4usPe",
           "spotlight": false
         }
       ]
@@ -1166,6 +1166,7 @@
           "_type": "FortPlaylistInfo"
         },
         {
+          "image": "https://pkmanager.twingalaxies.com/assets/article/2019/01/31/fortnite-trios_feature.jpg",
           "playlist_name": "Playlist_Trios",
           "hidden": false,
           "_type": "FortPlaylistInfo"
@@ -1352,10 +1353,10 @@
       "tournaments": [
         {
           "title_color": "FFFFFF",
-          "loading_screen_image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawin.jpg",
+          "loading_screen_image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/help.png",
           "background_text_color": "1B1B1B",
           "background_right_color": "DD091A",
-          "poster_back_image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawin.jpg",
+          "poster_back_image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/help.png",
           "_type": "Tournament Display Info",
           "pin_earned_text": "lawin is the winner!",
           "tournament_display_id": "s11_switchcup",
@@ -1363,7 +1364,7 @@
           "schedule_info": "November 2nd & 3rd: 2pm - 5pm JST",
           "primary_color": "FFFFFF",
           "flavor_description": "cool",
-          "poster_front_image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawin.jpg",
+          "poster_front_image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/help.png",
           "short_format_title": "Event Sessions",
           "title_line_2": "boomer",
           "title_line_1": "Solo",
@@ -1373,7 +1374,7 @@
           "long_format_title": "nice",
           "poster_fade_color": "DD091A",
           "secondary_color": "1B1B1B",
-          "playlist_tile_image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawin.jpg",
+          "playlist_tile_image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/help.png",
           "base_color": "FFFFFF"
         }
       ],
@@ -1392,8 +1393,8 @@
         {
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
-          "title": "LawinServer",
-          "body": "Server created by Lawin (Twitter: @lawin_010)\nDiscord: https://discord.gg/KJ8UaHZ",
+          "title": "LAWINSERVER V3",
+          "body": "Thank you for using LawinServerV3!",
           "spotlight": true
         }
       ]
@@ -1417,8 +1418,8 @@
           "gamemodes": [],
           "hidden": false,
           "_type": "CommonUI Emergency Notice Base",
-          "title": "LawinServer",
-          "body": "Server created by Lawin (Twitter: @lawin_010)\nDiscord: https://discord.gg/KJ8UaHZ"
+          "title": "LAWINSERVER V3",
+          "body": "Thank you for using LawinServerV3!"
         }
       ]
     },
@@ -6126,21 +6127,21 @@
           "tileImage": "https://fortnite-public-service-prod11.ol.epicgames.com/images/motd-s.png",
           "videoMute": false,
           "hidden": false,
-          "tabTitleOverride": "LawinServer",
+          "tabTitleOverride": "Thank you for using LawinServer V3!",
           "_type": "CommonUI Simple Message MOTD",
           "title": {
-            "ar": "مرحبًا بك في LawinServer!",
-            "en": "Welcome to LawinServer!",
-            "de": "Willkommen bei LawinServer!",
-            "es": "¡Bienvenidos a LawinServer!",
-            "es-419": "¡Bienvenidos a LawinServer!",
-            "fr": "Bienvenue sur LawinServer !",
-            "it": "Benvenuto in LawinServer!",
-            "ja": "LawinServerへようこそ！",
-            "ko": "LawinServer에 오신 것을 환영합니다!",
-            "pl": "Witaj w LawinServerze!",
-            "pt-BR": "Bem-vindo ao LawinServer!",
-            "ru": "Добро пожаловать в LawinServer!",
+            "ar": "مرحبًا بك في Thank you for using LawinServer V3!",
+            "en": "Welcome to LawinServer V3!",
+            "de": "Willkommen bei LawinServer V3!",
+            "es": "¡Bienvenidos a LawinServer V3!",
+            "es-419": "¡Bienvenidos a LawinServer V3!",
+            "fr": "Bienvenue sur LawinServer V3!",
+            "it": "Benvenuto in LawinServer V3!",
+            "ja": "LawinServer V3へようこそ！",
+            "ko": "LawinServer V3에 오신 것을 환영합니다!",
+            "pl": "Witaj w LawinServer V3ze!",
+            "pt-BR": "Bem-vindo ao LawinServer V3!",
+            "ru": "Добро пожаловать в LawinServer V3!",
             "tr": "LavinServer'a Hoş Geldiniz!"
           },
           "body": {
@@ -6163,7 +6164,7 @@
           "videoStreamingEnabled": false,
           "sortingPriority": 90,
           "websiteButtonText": "Discord",
-          "websiteURL": "https://discord.gg/KJ8UaHZ",
+          "websiteURL": "https://discord.gg/rPc5t4usPe",
           "id": "61fb3dd8-f23d-45cc-9058-058ab223ba5c",
           "videoAutoplay": false,
           "videoFullscreen": false,
@@ -6172,21 +6173,21 @@
       ],
       "messages": [
         {
-          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/discord.png",
+          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/help.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
-          "adspace": "DISCORD!",
-          "title": "Join our discord server!",
-          "body": "https://discord.gg/KJ8UaHZ",
+          "adspace": "NEED HELP?",
+          "title": "Join our Discord!",
+          "body": "https://discord.gg/rPc5t4usPe",
           "spotlight": false
         },
         {
-          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawin.jpg",
+          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawinserverv3.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
           "adspace": "ENJOY!",
-          "title": "LawinServer",
-          "body": "Enjoy LawinServer!",
+          "title": "Thank you for using LawinServer V3!",
+          "body": "https://discord.gg/rPc5t4usPe",
           "spotlight": false
         }
       ]
@@ -6209,21 +6210,21 @@
           "tileImage": "https://fortnite-public-service-prod11.ol.epicgames.com/images/motd-s.png",
           "videoMute": false,
           "hidden": false,
-          "tabTitleOverride": "LawinServer",
+          "tabTitleOverride": "Thank you for using LawinServer V3!",
           "_type": "CommonUI Simple Message MOTD",
           "title": {
-            "ar": "مرحبًا بك في LawinServer!",
-            "en": "Welcome to LawinServer!",
-            "de": "Willkommen bei LawinServer!",
-            "es": "¡Bienvenidos a LawinServer!",
-            "es-419": "¡Bienvenidos a LawinServer!",
-            "fr": "Bienvenue sur LawinServer !",
-            "it": "Benvenuto in LawinServer!",
-            "ja": "LawinServerへようこそ！",
-            "ko": "LawinServer에 오신 것을 환영합니다!",
-            "pl": "Witaj w LawinServerze!",
-            "pt-BR": "Bem-vindo ao LawinServer!",
-            "ru": "Добро пожаловать в LawinServer!",
+            "ar": "مرحبًا بك في LawinServer V3!",
+            "en": "Welcome to LawinServer V3!",
+            "de": "Willkommen bei LawinServer V3!",
+            "es": "¡Bienvenidos a LawinServer V3!",
+            "es-419": "¡Bienvenidos a LawinServer V3!",
+            "fr": "Bienvenue sur LawinServer V3!",
+            "it": "Benvenuto in LawinServer V3!",
+            "ja": "LawinServer V3へようこそ！",
+            "ko": "LawinServer V3에 오신 것을 환영합니다!",
+            "pl": "Witaj w LawinServer V3ze!",
+            "pt-BR": "Bem-vindo ao LawinServer V3!",
+            "ru": "Добро пожаловать в LawinServer V3!",
             "tr": "LavinServer'a Hoş Geldiniz!"
           },
           "body": {
@@ -6294,18 +6295,18 @@
           "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/discord.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
-          "adspace": "DISCORD!",
-          "title": "Join our discord server!",
-          "body": "https://discord.gg/KJ8UaHZ",
+          "adspace": "NEED HELP?",
+          "title": "Join our Discord!",
+          "body": "https://discord.gg/rPc5t4usPe",
           "spotlight": false
         },
         {
-          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/lawin.jpg",
+          "image": "https://fortnite-public-service-prod11.ol.epicgames.com/images/help.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
-          "adspace": "ENJOY!",
-          "title": "LawinServer",
-          "body": "Enjoy LawinServer!",
+          "adspace": "WELCOME!",
+          "title": "Thank you for using LawinServer V3!",
+          "body": "https://discord.gg/rPc5t4usPe",
           "spotlight": false
         }
       ]
@@ -6338,7 +6339,7 @@
           "bHidden": false,
           "sectionId": "Featured",
           "bShowTimer": true,
-          "sectionDisplayName": "LawinServer Item Shop",
+          "sectionDisplayName": "LawinServer V3 Item Shop",
           "bShowIneligibleOffers": true
         }
       ]
