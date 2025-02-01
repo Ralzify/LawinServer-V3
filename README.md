@@ -17,7 +17,7 @@
 - Fixed 12.41 Locker
 
 ## Planned Features/Updates
-:3
+- Curvetable/Datatable Customization Directly Through start.bat
 
 ## Base Lawin Features:
 
