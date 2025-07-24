@@ -18,6 +18,7 @@
 
 ## Planned Features/Updates
 - Curvetable/Datatable Customization Directly Through start.bat
+- Update athena.json to include later chapter cosmetics.
 
 ## Base Lawin Features:
 
