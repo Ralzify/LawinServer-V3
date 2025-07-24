@@ -1,6 +1,5 @@
 @echo off
-title Install Lawin Server
+title Install Lawin Server V3
 
 npm i
-npm install axios
 pause
